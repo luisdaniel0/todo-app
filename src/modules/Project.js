@@ -9,10 +9,13 @@ export default class Project{
         this.todos.push(todo)
     }
 
-    removeTodo(todo){
-       const index= this.todos.indexOf(todo)
-        if(index!==-1){
-            this.todos.splice(index,1)
-        }
+    removeTodo(todo) {
+    const index = this.todos.indexOf(todo);
+    if (index === -1) {
+        console.log("Todo not found in this project");
+        return;
     }
+    this.todos.splice(index, 1);
+    console.log(`Todo removed: ${todo.title}`);
+}
 }

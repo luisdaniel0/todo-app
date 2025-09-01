@@ -17,7 +17,6 @@ const todo1 = new Todo("Math","math homework","2924-4-4", "high", )
 
 pm.addTodoToProject(todo1, "Work")
 
-// 5. Inspect the state
-console.log("Todos in Work project:", workProject.todos); // Should include todo1
-console.log("Todos in Default project:", pm.defaultProject.todos); // Should be empty
-console.log("All projects:", pm.projects); // Check projects array to see nothing else was affected
+pm.removeTodoFromProj(todo1, "Work")
+
+console.log(workProject)

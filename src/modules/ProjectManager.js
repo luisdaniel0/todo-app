@@ -32,4 +32,15 @@ export default class ProjectManager{
         }
 
     }
+
+    removeTodoFromProj(todo,projectName){
+        const project = this.findProject(projectName)
+        if(!project){
+            console.log("this project dont exist")
+            return //stop
+        } else{
+            project.removeTodo(todo)
+            console.log(`Todo removed from project: ${project.name}`)
+        }
+    }
 }

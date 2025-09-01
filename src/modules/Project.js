@@ -17,5 +17,13 @@ export default class Project{
     }
     this.todos.splice(index, 1);
     console.log(`Todo removed: ${todo.title}`);
+    }
+
+    listAllTodos() {
+    for (let i = 0; i < this.todos.length; i++) {
+        const todo = this.todos[i];
+        console.log(`Title: ${todo.title}, Due: ${todo.dueDate}`);
+        
+    }
 }
 }

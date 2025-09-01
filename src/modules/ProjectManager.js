@@ -23,12 +23,13 @@ export default class ProjectManager{
         //if project exists, add todo instance to that project
         //confirm the project it was added to 
         const project = this.findProject(projectName)
-        if(!project){
-            console.log("this project doesn't exist")
-            return //stop
-        } else{
+        if(project){
             project.addTodo(todo)
             console.log(`Todo added to project: ${project.name}`);
+            return //stop
+        } else{
+            this.defaultProject.addTodo(todo)
+            console.log("this project doesn't exist, added to Default Project")
         }
 
     }
